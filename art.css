@@ -1,0 +1,101 @@
+body {
+  margin: auto;
+  font-size: 100;
+  background-image: url("atarigames.jpg");
+  background-color: hotpink;
+  padding: 2.5%;
+  font-family: "Agipo Mono" serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.0625fr 1fr 0.125fr;
+  grid-template-rows: 1fr;
+  align-items: start;
+}
+
+.text {
+  grid-area: text;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 0.125fr 1fr 0.25fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2.5%;
+    grid-row-gap: 2.5%;
+  }
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2.5%;
+    grid-row-gap: 2.5%;
+  }
+  img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@font-face {
+  font-family: Agipo Mono;
+  src: url(agipo_mono.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Agipo Bold;
+  src: url(agipo_bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Agipo Regular Italic;
+  src: url(agipo_regular_italic.otf) format("opentype");
+}
+
+p {
+  font-family: Agipo Mono, monospace;
+  color: white;
+  background-color: black;
+  padding: 1em;
+}
+
+.title {
+  text-align: center;
+  color: red;
+  background-color: black;
+}
+
+.quote {
+  font-family: Agipo Regular Italic, serif;
+  color: red;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  font-size: 1.4625em;
+}
+
+h1 {
+  font-family: Agipo Bold, serif;
+  color: yellow;
+}
+
+h3 {
+  font-family: Agipo Regular Italic, serif;
+  color: white;
+  margin-bottom: 6em;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  background-color: black;
+  padding: 1.5em;
+}
