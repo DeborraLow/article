@@ -1,8 +1,7 @@
 body {
   margin: auto;
   font-size: 100;
-  background-image: url("atarigames.jpg");
-  background-color: hotpink;
+  background-color: black;
   padding: 2.5%;
   font-family: "Agipo Mono" serif;
 }
@@ -11,14 +10,40 @@ body {
   display: grid;
   grid-template-columns: 0.0625fr 1fr 0.125fr;
   grid-template-rows: 1fr;
+  position: absolute;
+  z-index: 1;
+}
+
+.grid p,
+.grid img,
+.grid h1,
+.grid h3 {
+  box-shadow: 0px 0px 12.5px blue;
+  border-radius: 10px;
+}
+
+.backgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
   align-items: start;
+  justify-content: center;
+  grid-gap: 1em;
+}
+
+.backgrid img {
+  max-width: 80px;
+  width: 100%;
 }
 
 .text {
   grid-area: text;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .grid {
     display: grid;
     grid-template-columns: 0.125fr 1fr 0.25fr;
@@ -26,13 +51,22 @@ body {
     grid-column-gap: 2.5%;
     grid-row-gap: 2.5%;
   }
-  img {
+  .backgrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .backgrid img {
+    width: 100%;
+    max-width: 80px;
+    grid-gap: 0.75em;
+  }
+  .grid img {
     width: 100%;
     max-width: 500px;
+    padding: 1em;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .grid {
     display: grid;
     grid-template-columns: 0.25fr 1fr 0.5fr;
@@ -40,9 +74,18 @@ body {
     grid-column-gap: 2.5%;
     grid-row-gap: 2.5%;
   }
-  img {
+  .backgrid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .backgrid img {
+    width: 100%;
+    max-width: 80px;
+    grid-gap: 0.625em;
+  }
+  .grid img {
     width: 100%;
     max-width: 600px;
+    padding: 1.5em;
   }
 }
 
@@ -61,41 +104,57 @@ body {
   src: url(agipo_regular_italic.otf) format("opentype");
 }
 
+@font-face {
+  font-family: Millimetre Bold;
+  src: url(Millimetre-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Millimetre Regular;
+  src: url(Millimetre-Regular.otf) format("opentype");
+}
+
 p {
-  font-family: Agipo Mono, monospace;
+  font-family: Millimetre Regular, monospace;
   color: white;
   background-color: black;
   padding: 1em;
+  letter-spacing: 0.075em;
+  line-height: 1.4em;
 }
 
 .title {
   text-align: center;
   color: red;
   background-color: black;
+  padding: 0.5em;
 }
 
 .quote {
-  font-family: Agipo Regular Italic, serif;
+  font-family: Millimetre Regular, serif;
   color: red;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
   font-size: 1.4625em;
+  letter-spacing: 0.075em;
 }
 
 h1 {
-  font-family: Agipo Bold, serif;
+  font-family: Millimetre Regular, serif;
   color: yellow;
+  letter-spacing: 0.075em;
 }
 
 h3 {
-  font-family: Agipo Regular Italic, serif;
+  font-family: Millimetre Regular, serif;
   color: white;
   margin-bottom: 6em;
+  letter-spacing: 0.075em;
 }
 
 img {
   width: 100%;
   max-width: 400px;
   background-color: black;
-  padding: 1.5em;
+  padding: 0.5em;
 }

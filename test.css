@@ -1,0 +1,45 @@
+.wrapper1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "a b c"
+    "b c a"
+    "c a b";
+  z-index: 1;
+  position: fixed;
+  grid-gap: 1em;
+}
+.item1 {
+  grid-area: a;
+  background-color: blue;
+}
+.item2 {
+  grid-area: b;
+  background-color: red;
+}
+.item3 {
+  grid-area: c;
+  background-color: green;
+}
+.wrapper2 {
+  display: grid;
+}
+div {
+  height: 5em;
+  width: 5em;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a b c"
+    "b c a"
+    "c a b";
+}
+
+body {
+  background-color: yellow;
+}
