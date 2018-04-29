@@ -1,3 +1,5 @@
+/* Override initial settings */
+
 body {
   margin: auto;
   font-size: 100;
@@ -6,21 +8,7 @@ body {
   font-family: "Agipo Mono" serif;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 0.0625fr 1fr 0.125fr;
-  grid-template-rows: 1fr;
-  position: absolute;
-  z-index: 1;
-}
-
-.grid p,
-.grid img,
-.grid h1,
-.grid h3 {
-  box-shadow: 0px 0px 12.5px blue;
-  border-radius: 10px;
-}
+/* Grid for background images */
 
 .backgrid {
   display: grid;
@@ -34,14 +22,14 @@ body {
   grid-gap: 1em;
 }
 
+/* Rule for background images */
+
 .backgrid img {
   max-width: 80px;
   width: 100%;
 }
 
-.text {
-  grid-area: text;
-}
+/* Grid media query */
 
 @media (min-width: 800px) {
   .grid {
@@ -89,6 +77,8 @@ body {
   }
 }
 
+/* Custom type */
+
 @font-face {
   font-family: Agipo Mono;
   src: url(agipo_mono.otf) format("opentype");
@@ -112,6 +102,24 @@ body {
 @font-face {
   font-family: Millimetre Regular;
   src: url(Millimetre-Regular.otf) format("opentype");
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.0625fr 1fr 0.125fr;
+  grid-template-rows: 1fr;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Styling */
+
+.grid p,
+.grid img,
+.grid h1,
+.grid h3 {
+  box-shadow: 0px 0px 12.5px blue;
+  border-radius: 10px;
 }
 
 p {
